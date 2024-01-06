@@ -1,0 +1,51 @@
+// store index to start of digits
+load =5
+store 3 // current
+store 4 // started
+
+// store number
+read 1
+
+load 1
+sub =10000
+jgzero rejectOutput
+
+get:
+load 1
+jzero writeTo
+div =10
+mul =10
+store 2
+
+load 1 
+sub 2
+store *3 
+
+load 2
+div =10
+store 1
+
+load 3
+add =1
+store 3
+jump get
+
+writeTo:
+load *4
+write 0
+load 4
+add =1
+store 4
+load 3
+sub 4
+jgtz writeTo
+halt
+
+rejectOutput:
+reject
+
+
+
+
+
+
